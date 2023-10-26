@@ -1,322 +1,172 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-/* Navbar */
-.navbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky !important;
-    top: 0;
-    z-index: 1;
-    background-image: url(navbar.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.navbar ul{
-    display: flex;
-    list-style: none;
-    margin: 20px 0px;
-}
-.navbar ul li{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-    font-weight: bold;
-}
-.navbar ul li a{
-    color: white;
-    text-decoration: none;
-    color: white(252, 252, 249);
-    padding: 8px 25px;
-    transition: all .5s ease;
-}
-.navbar ul li a:hover{
-    background-color: black;
-    color: rgb(8, 218, 237);
-    box-shadow: 0 0 10px rgb(1, 1, 4);
-}
-
-/* Home Section */
-#home{
-    display:flex;
-    flex-direction: column;
-    height: 840px;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-#home::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 900px;
-    width: 100%;
-    z-index: -1;
-    opacity: 1;
-}
-.main{
-    display: flex;
-    flex-direction: column;
-    /*border: 1px solid  white;*/
-    align-items: right;
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    color: aliceblue;
-    padding-top: 200px;
-}
-.headings{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3rem;
-    text-align: center;
-    /* margin: 40px 0px; */
-}
-
-span{
-    color: aqua;
-}
-.btn{
-    padding: 10px 35px;
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    outline: none;
-    transition: .6s ease;
-}
-.btn:hover{
-    cursor: pointer;
-    background-color: black;
-    color: aqua;
-    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
-    font-weight: bold;
-} 
-
-body{
-    min-height: 100vh;
-    max-width: 100%;
-    text-align: center;
-}
-
-.background{
-    background-color: darkslategray;
-}
-
-.container{
-    position: relative;
+.hero{
     width: 100%;
     height: 100vh;
+    background-image: url(/Images/background.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
     overflow: hidden;
-
 }
-.bubbles{
-    position: relative;
-    display: flex;
-}
-.bubbles span{
-    position: relative;
-    width: 10px;
-    height: 30px;
-    background: aqua;
-    margin: 0 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44,
-    0 0 50px lightblue,
-    0 0 100px lightblue;
-    animation: animate 15s linear infinite;
-    animation-duration: calc(90s / var(--i));
-}
-.bubbles span:nth-child(even){
-    background: white;
-    box-shadow: 0 0 0 10px #4fc3dc44,
-    0 0 50px lightcyan,
-    0 0 100px black;
-}
-@keyframes animate{
-    0%{ transform: translateY(-10vh) scale(0);}
-    100%{ transform: translateY(100vh) scale(1);}
-}
-
-
-/* About Section */
-
-#about{
-    color: aliceblue;
-    text-align: left;
-}
-#pic{
-    display: flex;
-}
-#pic img{
-    width: 375px;
-    height: 100%;
-}
-#intro{
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    padding: 10px;
-    color: aliceblue;
-}
-#intro h2{
-    font-size: 2rem;
-    margin-bottom: 20px;
-
-}
-
-/* Project Section */
-.heading{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3rem;
-    text-align: left;
-    margin: 0px 40px;
-}
-
-img{
-    width: 300px;
-    height: 300px;
-}
-
-#home{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "heading1   heading    heading2"
-    "pic1      pic2       pic3"
-    "pic4     pic5        pic6";
-    ;
-}
-
-.head {
-    grid-area: heading;
-    text-align: center;
-    border: auto;
-}
-
-.head h1{
-        text-align: center;
-}
-
-#taper{
-    grid-area: pic1;
-    filter: grayscale(75%);
-}
-
-#taper:hover{
-    filter: grayscale(0%);
-}
-
-#taper h2{
-    text-align: center;
-}
-
-#mullet{
-    grid-area: pic2;
-    filter: grayscale(75%);
-}
-
-#mullet:hover{
-    filter: grayscale(0%);
-}
-#mullet h2{
-    text-align: center;
-}
-
-#beard{
-    grid-area: pic3;
-    filter: grayscale(75%);
-}
-
-#beard:hover{
-    filter: grayscale(0%);
-}
-#beard h2{
-    text-align: center;
-}
-
-#Bunny{
-    grid-area: pic4;
-    filter: grayscale(75%);
-}
-
-#Bunny:hover{
-    filter: grayscale(0%);
-}
-#Bunny h2{
-    text-align: center;
-}
-
-#Vienna{
-    grid-area: pic5;
-    filter: grayscale(75%);
-}
-
-#Vienna:hover{
-    filter: grayscale(0%);
-}
-#Vienna h2{
-    text-align: center;
-}
-
-#Calamari{
-    grid-area: pic6;
-    filter: grayscale(75%);
-}
-
-#Calamari:hover{
-    filter: grayscale(0%);
-}
-
-#Calamari h2{
-    text-align: center;
-}
-
-
-/* Contact Section */
-#contact{
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    background-color: transparent;
-    color: aliceblue;
-    text-align: center;
-    font-size: 1.3em;
-    align-items: center;
-}
-.form{
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    align-items: center;
-    margin: 20px 0px;
-}
-.input{
-    padding: 12px;
-    margin: 15px;
-    width: 30%;
-    border: none;
-    outline: none;
-}
-#send{
-    padding: 10px;
-    width: 30%;
-    margin: 40px;
-    border: none;
-    outline: none;
-}
-#send:hover{
-    background-color: black;
-    color: rgb(8, 218, 237);
-    box-shadow: 0 0 10px rgb(1, 1, 4);
+.logo{
+    width: 100px;
     cursor: pointer;
-    box-shadow: 0 0 10px white;
+}
+.navbar{
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+button{
+    color: #fbfcfd;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+.content{
+    color: #fbfcfd;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
-/* Media query */
-@media screen and (max-width){
-    
+h1{
+    font-size: 80px;
+    margin: 10px 0 30px;
+    line-height: 80px;
+}
+.side-bar{
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(#00545d, #000729);
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+}
+.menu{
+    display: block;
+    width: 25px;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+.social-links img, .useful-links img{
+    width: 25px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+.social-links{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.useful-links{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+}
+.bubbles img{
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+
+.bubbles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+    width: 20px;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 7s;
+    width: 35px;
+}
+
+.About{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/Images/about.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.Projects{
+    width: 100%;
+    height: 100vh;
+    background-color: #000729;
+}
+.Testimonials{
+    width: 100%;
+    height: 100vh;
+    background-color: #000729;
+}
+.Work{
+    width: 100%;
+    height: 100vh;
+    background-color: #000729;
+}
+.Contact{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/Images/bikinibottom.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(35%);
 }
